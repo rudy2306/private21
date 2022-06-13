@@ -172,10 +172,10 @@ echo "\n";
     ];
 
     $alarm = curlget('https://app.oneaset.co.id/api/app/biz/activity/finc/activityInfo', null, $headers);
-    $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
-    $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
+    $getData = get_between($alarm[1], '"nameId":"财经任务1-邀请好友注册",', '},');
+    $amountTersedia = get_between($getData, '"relationStatus":', ',"relationStatus":');
     echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-    if ($amountTersedia < 10) {
+    if ($amountTersedia < 3) {
         echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
         goto awal;
     } else {
@@ -409,8 +409,8 @@ echo "\n";
     ];
 
     $alarm = curlget('https://app.oneaset.co.id/api/app/biz/activity/finc/activityInfo', null, $headers);
-    $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
-    $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
+    $getData = get_between($alarm[1], '"nameId":"财经任务1-邀请好友注册",', '},');
+    $amountTersedia = get_between($getData, '"relationStatus":', ',"relationStatus":');
     echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
     if ($amountTersedia < 10) {
         echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
@@ -641,8 +641,8 @@ echo "\n";
         ];
     
         $alarm = curlget('https://app.oneaset.co.id/api/app/biz/activity/finc/activityInfo', null, $headers);
-        $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
-        $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
+        $getData = get_between($alarm[1], '"nameId":"财经任务1-邀请好友注册",', '},');
+        $amountTersedia = get_between($getData, '"relationStatus":', ',"relationStatus":');
         echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
         if ($amountTersedia < 10) {
             echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
@@ -894,8 +894,8 @@ $headers = [
 ];
 
 $alarm = curlget('https://app.oneaset.co.id/api/app/biz/activity/finc/activityInfo', null, $headers);
-$getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
-$amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
+$getData = get_between($alarm[1], '"nameId":"财经任务1-邀请好友注册",', '},');
+$amountTersedia = get_between($getData, '"relationStatus":', ',"relationStatus":');
 echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
 if ($amountTersedia < 10) {
     echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
